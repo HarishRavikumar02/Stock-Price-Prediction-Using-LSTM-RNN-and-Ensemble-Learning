@@ -1,0 +1,209 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Forecast</title>
+
+   
+    <link rel="stylesheet" href="../static/styles1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    
+</head>
+<body>
+   <header class="header">
+    <nav class="nav">
+        <a href="#" class="nav_logo">Stock Forecast</a>
+
+        <ul class="nav_items">
+            <li class="nav_item">
+                <a href="#home" class="nav_link">Home</a>
+                <a href="#about" class="nav_link">About</a>
+                <a href="predict" class="nav_link">Predict</a>
+                <a href="#contact" class="nav_link">Contact</a>
+            </li>
+        </ul>
+
+        <button class="button" id="form_open">Login</button>
+    </nav>
+   </header>
+
+   <section id="home" class="home">
+    <div class="live_price-container">
+        <div class="container2">
+            <div class="coin-price">
+                <div class="logo"><img src="../static/images/apple.png"></div>
+                <div>
+                    <h1>$<span id="apple"></span></h1>
+                    <h1>APPLE</h1>
+                </div>
+            </div>
+            <div class="coin-price">
+                <div class="logo"><img src="../static/images/google.png"></div>
+                <div>
+                    <h1>$<span id="google"></span></h1>
+                    <h1>GOOGLE</h1>
+                </div>
+            </div>
+              
+              <div class="coin-price">
+                <div class="logo"><img src="../static/images/amazon.png"></div>
+                <div>
+                    <h1>$<span id="amazon"></span></h1>
+                    <h1>AMAZON</h1>
+                </div>
+              </div>
+              <div class="coin-price">
+                <div class="logo"><img src="../static/images/microsoft.png" ></div>
+                <div>
+                    <h1>$<span id="microsoft"></span></h1>
+                    <h1>MICROSOFT</h1>
+                </div>
+              </div>
+              <div class="coin-price">
+                <div class="logo"><img src="../static/images/tesla.png" ></div>
+                <div>
+                    <h1>$<span id="tesla"></span></h1>
+                    <h1>TESLA</h1>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="form_container">
+        <i class="uil uil-times form_close"></i>
+        <div class="form login_form">
+            <form action="#">
+                <h2>Login</h2>
+                <div class="input_box">
+                    <input type="email" placeholder="Enter your email" required >
+                    <i class="uil uil-envelope-alt email"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" placeholder="Enter your password" required >
+                    <i class="uil uil-lock password"></i>
+                    <i class="uil uil-eye-slash pw_hide"></i>
+                </div>
+
+                <div class="option_field">
+                    <span class="checkbox">
+                        <input type="checkbox" id="check">
+                        <label for="check">Remember me</label>
+                    </span>
+                    <a href="#" class="forgot_pw">Forgot password?</a>
+                </div>
+
+                <button class="button">Login Now</button>
+                <div class="login-signup">
+                    Don't have an account? <a href="#" id="signup">Signup</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="form signup_form">
+            <form action="#" onsubmit="signup(event)">
+                <h2>Signup</h2>
+                <div class="input_box">
+                    <input type="text" id="name" placeholder="Enter your name" required >
+                    <i class="uil uil-user-circle name"></i>
+                </div>
+                <div class="input_box">
+                    <input type="email" id="email" placeholder="Enter your email" required >
+                    <i class="uil uil-envelope-alt email"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" id="password" placeholder="Create password" required >
+                    <i class="uil uil-lock password"></i>
+                    <i class="uil uil-eye-slash pw_hide"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" id="copassword" placeholder="Confirm password" required >
+                    <i class="uil uil-lock password"></i>
+                    <i class="uil uil-eye-slash pw_hide"></i>
+                </div>
+
+                <button id="Register" class="button">Register Now</button>
+                <div class="login-signup">
+                    Already have an account? <a href="#" id="login">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+   </section>
+    
+   <section id="about" class="about">
+    <div class="about1">
+        <div class="about-section">
+            <div class="inner-container">
+                <h1>About Us</h1>
+                <p class="text">
+                    This is our Undergraduate Final Year Project on Stock Market Forecasting. The goal of the stock market forecasting project is to create a model that can estimate future stock values using historical data and pertinent parameters. The ultimate objective is to give relevant insights and predictions to investors and traders so that they may make educated stock market decisions. The project combines data analysis, machine learning, and financial knowledge to provide a trustworthy and effective tool for forecasting stock market trends and prices.
+                </p>
+                <div class="members">
+                    <span>Dr.R.Lalitha <br> Mentor </span>
+                    <span>Harish Kumar.R <br> Student </span>
+                    <span>Jayaraj.S <br> Student </span>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+
+   <section id="contact" class="contact">
+    <div class="content">
+        <h2>Contact Us</h2>
+        
+    </div>
+    <div class="container1">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon"><i class="uil uil-location-pin-alt"></i></div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <p>Rajalakshmi Institute of Technology,<br> Chennai, Tamil Nadu,<br>India</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="uil uil-phone"></i></div>
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p>+91-9182736450 <br> +91-9876543210 </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="uil uil-envelope-alt"></i></div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <p> harishkumar.r.2019.cse@ritchennai.edu.in<br>
+                        jayaraj.s.2019.cse@ritchennai.edu.in</p>
+                </div>
+            </div>
+        </div>
+        <div class="contactForm">
+            <form class="con" action="#">
+                <h2>Send Message</h2>
+                <div class="inputbox">
+                    <input type="text" name="" required="required">
+                    <span>Full Name</span>
+                </div>
+                <div class="inputbox">
+                    <input type="email" name="" required="required">
+                    <span>Email</span>
+                </div>
+                <div class="inputbox">html
+                    <Textarea required="required"></Textarea>
+                    <span>Type Your Message</span>
+                </div>
+                <div class="inputbox">
+                    <input type="submit" required="required" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+   <script src="./static/script1.js"></script>
+   
+</body>
+</html>

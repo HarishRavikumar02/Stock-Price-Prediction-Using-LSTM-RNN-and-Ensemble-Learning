@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stock Forecast</title>
+
+	<!-- Load custom CSS styles -->
+	<link rel="stylesheet" href="../static/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body>
+	<header class="header">
+		<nav class="nav">
+			<a href="#" class="nav_logo">Stock Forecast</a>
+	
+			<ul class="nav_items">
+				<li class="nav_item">
+					<a href="/home" class="nav_link">Home</a>
+					<a href="/home#about" class="nav_link">About</a>
+					<a href="#" class="nav_link">Predict</a>
+					<a href="/home#contact" class="nav_link">Contact</a>
+				</li>
+			</ul>
+	
+			<!-- <button class="button" id="form_open">Login</button> -->
+		</nav>
+	   </header>
+
+	   <section class="predict">
+		<div class="form_container">
+			<div class="form login_form">
+				<form class+="form"  method="POST" action="/prediction">
+					<h2>Prediction</h2>
+							<div class="input_box">
+					            <label for="symbol">Select Stock</label>
+								<input type="text" placeholder="Stock Symbol" id="symbol" name="symbol" required >
+							</div>
+							<div class="input_box">
+								<label for="start_date">Start Date</label>
+						        <input type="date" id="start_date" name="start_date" placeholder="Start Date" required>
+							</div>
+					        <div class="input_box">
+								<label for="end_date">End Date</label>
+					            <input type="date" id="end_date" name="end_date" placeholder="End Date" required>
+							</div>
+							<input class="button" type="submit" value="Predict">
+				  </form>
+			</div>
+	   </section>
+	
+</body>
+</html>

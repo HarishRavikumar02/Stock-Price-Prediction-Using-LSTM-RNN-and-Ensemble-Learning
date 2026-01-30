@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Price Predictions</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="plot"></div>
+
+    <script>
+        // Retrieve the plot JSON from the Flask app
+        var plotJSON = {{ plot_json|safe }};
+
+        // Display the plot using Plotly.js
+        Plotly.newPlot('plot', plotJSON.data, plotJSON.layout);
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Stock Price Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="../static/prediction.css">
+</head>
+
+<body>
+  <h1>Stock Forecast</h1>
+  <div class="sec">
+    {% if plot_json %}
+    <div id="output">
+      <div id="plot"></div>
+    </div>
+    <div id="table">
+      {{ results|safe }}
+    </div>
+  </div>
+  <script>
+    var plot_data = {{ plot_json | safe }};
+    Plotly.newPlot('plot', plot_data.data, plot_data.layout, { responsive: true });
+  </script>
+  {% endif %}
+</body>
